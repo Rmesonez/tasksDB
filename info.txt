@@ -1,0 +1,23 @@
+npm i 
+express  para routing y server
+morgan   para ver en consola las peticiones
+nodemon  para no tener que reiniciar el servidor
+sequelize ORM para conectarnos a la db
+pg pg-hstore modulo necesario para postgres
+
+
+script de inicio npm start
+"start": "nodemon src/index.js",
+
+se crea una db llamada tasksDB en dbeaver conectada a postgres y se conecta con sequelize
+
+
+//para relacionar las tablas
+//hay q importar el modelo de la otra tabla
+//const User = require('./User');
+//una tarea pertenece a un usuario
+//Task.belongsTo(User, { foreignKey: 'userId', constraints: true, onDelete: 'CASCADE', onUpdate: 'CASCADE', targetKey: 'id' });
+//una tarea tiene un usuario
+//task.hasOne(user, { foreignKey: 'userId', constraints: true, onDelete: 'CASCADE' });
+//un usuario tiene muchas tareas
+//User.hasMany(Task, { foreignKey: 'userId', constraints: true, onDelete: 'CASCADE', onUpdate: 'CASCADE', sourceKey: 'id' });
