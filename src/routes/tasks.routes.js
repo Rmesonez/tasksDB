@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const Task = require('../models/Task');
+const Task = require('../models/Task.models');
 const { 
     getAllTasks, 
     createTask,
