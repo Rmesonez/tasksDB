@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('./database/database.js');
 const tasksRoutes = require('./routes/tasks.routes');
-require('./models/Task.models')
+
 
 const app = express();
 const PORT = process.env.PORT || 4000;
