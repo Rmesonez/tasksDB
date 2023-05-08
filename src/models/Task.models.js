@@ -17,9 +17,9 @@ const Task = db.define('tasks', {
         allowNull: false
     },
     status: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING(20),
         allowNull: false,
-        defaultValue: false
+        defaultValue: 'Pending'
     }
 },{
     timestamps: false
