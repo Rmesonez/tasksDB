@@ -16,7 +16,7 @@ const Task = db.define('tasks', {
         type: DataTypes.STRING(150),
         allowNull: false
     },
-    complete: {
+    completed: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
