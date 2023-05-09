@@ -16,10 +16,10 @@ const Task = db.define('tasks', {
         type: DataTypes.STRING(150),
         allowNull: false
     },
-    status: {
-        type: DataTypes.STRING(20),
+    completed: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: 'Pending'
+        defaultValue: false
     }
 },{
     timestamps: false
