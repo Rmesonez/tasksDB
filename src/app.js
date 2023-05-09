@@ -20,7 +20,7 @@ async function testConnection() {
             console.log(`Server listening on port ${PORT}...`);
         });
         //sync all models with database force true will drop the table if it already exists
-        await db.sync({ force: true });
+        await db.sync({ force: false });
     } catch (error) {
         console.error('Unable to connect to the database:', error);
         }
