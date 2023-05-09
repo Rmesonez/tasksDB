@@ -14,9 +14,9 @@ const getAllTasks = async (req, res) => {
 };
 
 const createTask = async (req, res) => {
-    const { title, description, status } = req.body;
+    const { title, description, completed } = req.body;
     try {
-        const newTask = await Task.create({ title, description, status });
+        const newTask = await Task.create({ title, description, completed });
         // console.log(newTask)
         // res.send('task created');
         res.json(newTask);
@@ -28,10 +28,10 @@ const createTask = async (req, res) => {
 };
 
 const updateTask = async (req, res) => {
-    const { title, description, status } = req.body;
+    const { title, description, completed } = req.body;
     try {
         const updateTask = await Task.update(
-            { title, description, status },
+            { title, description, completed },
             { where: { id: req.params.id }
         });
         res.json(updateTask);
