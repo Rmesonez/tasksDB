@@ -10,7 +10,10 @@ const {
     } = require('../utils/tasks.controller');
 
 
-
+//matrix
+router.get('/', async (req, res) => {
+    res.send('Welcome to my API') 
+});
 
 // Get all tasks
 router.get('/api/v1/todos', getAllTasks);
